@@ -32,6 +32,13 @@ public:
         }
         size=ans.size();
         sort(ans.begin(),ans.end());
+        
+        /*
+        we are using size-1 here because when it will go to the last lement element
+        then it will compare it self with the last+1 element, because that element doen't exist so
+        it will go under buffer overflow so we are using size -1 here.
+        */
+        
         for(int i=0;i<size-1;i++)
         {
             if(ans[i]==ans[i+1])
